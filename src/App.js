@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { useState } from "react";
 import './App.css';
+import Login from "./Pages/login/Login"
+
+
+
+
 
 function App() {
+  const [user,setUser]=useState(false)
+
+  const login=(e)=>{
+    
+ if(e===true){
+  setUser(true)
+ }else{
+  setUser(false)
+}
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      {user ? <h1>signed succesfully</h1> : 
+        <div>
+        <Login login={login}/>
+       </div>
+      }
+    
+      </div>
   );
 }
 

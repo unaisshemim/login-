@@ -1,0 +1,16 @@
+.main-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .form-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid black;
+        height: 70vh;
+        width: 80vh;
+        box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+        border-radius: 5px;
+    }
+}
